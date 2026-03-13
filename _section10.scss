@@ -3,7 +3,7 @@
     background-color: #fff;
 
     &__container {
-        max-width: 1500px;
+        max-width: 1400px;
         margin: 0 auto;
         display: flex;
         gap: 2rem;
@@ -104,7 +104,7 @@
         }
 
         &__image {
-            flex: 2.2;
+            flex: 1.8;
             background-color: #fff2e6;
             display: flex;
             align-items: center;
@@ -119,8 +119,8 @@
         }
 
         &__info {
-            flex: 1;
-            padding: 1.5rem 2rem;
+            flex: 1.4;
+            padding: 2rem 2.5rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -144,11 +144,12 @@
             margin: 0 0 2rem 0;
 
             li {
-                font-size: 0.95rem;
-                color: #555;
-                margin-bottom: 0.4rem;
+                font-size: 0.9rem;
+                color: #444;
+                margin-bottom: 0.8rem;
                 position: relative;
                 padding-left: 1.5rem;
+                line-height: 1.4;
 
                 &::before {
                     content: "•";
@@ -176,31 +177,43 @@
         }
 
         .price-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+
             .special-offer {
-                font-size: 0.85rem;
-                font-weight: 600;
-                color: #f1802a;
-                display: block;
-                margin-bottom: 0.2rem;
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: #e8802a;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
             }
 
             .price-tag {
                 display: flex;
-                align-items: center;
-                gap: 1rem;
+                align-items: baseline;
+                gap: 0.8rem;
 
                 .price-now {
-                    font-size: 1.6rem;
-                    font-weight: 700;
+                    font-size: 2rem;
+                    font-weight: 800;
                     color: #222;
-                    line-height: 1;
+                    letter-spacing: -1px;
+
+                    @media (max-width: 480px) {
+                        font-size: 1.6rem;
+                    }
                 }
 
                 .price-was {
-                    font-size: 1rem;
+                    font-size: 0.95rem;
                     color: #999;
                     text-decoration: line-through;
-                    line-height: 1;
+                    font-weight: 400;
+
+                    @media (max-width: 480px) {
+                        font-size: 0.85rem;
+                    }
                 }
             }
         }

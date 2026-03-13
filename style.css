@@ -1188,10 +1188,10 @@ body {
 }
 .tech-section .tech-card .tech-card__accent {
   display: block;
-  width: 50px;
-  height: 5px;
+  width: 120px;
+  height: 10px;
   background-color: #e8802a;
-  border-radius: 3px;
+  border-radius: 5px;
   flex-shrink: 0;
 }
 .tech-section .tech-card .tech-card__desc {
@@ -1271,6 +1271,14 @@ body {
     flex: 0 0 260px;
     min-width: 0px;
     aspect-ratio: 1/1.1;
+  }
+  .tech-section .tech-card .tech-card__accent {
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: #e8802a;
+    border-radius: 5px;
+    flex-shrink: 0;
   }
 }
 .google-reviews {
@@ -1619,7 +1627,7 @@ body {
   background-color: #fff;
 }
 .section10__container {
-  max-width: 1500px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   gap: 2rem;
@@ -1710,7 +1718,7 @@ body {
   }
 }
 .section10 .promo-card__image {
-  flex: 2.2;
+  flex: 1.8;
   background-color: #fff2e6;
   display: flex;
   align-items: center;
@@ -1724,8 +1732,8 @@ body {
      object-fit: cover;
 }
 .section10 .promo-card__info {
-  flex: 1;
-  padding: 1.5rem 2rem;
+  flex: 1.4;
+  padding: 2rem 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1748,11 +1756,12 @@ body {
   margin: 0 0 2rem 0;
 }
 .section10 .promo-card__list li {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.8rem;
   position: relative;
   padding-left: 1.5rem;
+  line-height: 1.4;
 }
 .section10 .promo-card__list li::before {
   content: "•";
@@ -1776,29 +1785,44 @@ body {
     width: 100%;
   }
 }
+.section10 .promo-card .price-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
 .section10 .promo-card .price-section .special-offer {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #f1802a;
-  display: block;
-  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #e8802a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 .section10 .promo-card .price-section .price-tag {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  align-items: baseline;
+  gap: 0.8rem;
 }
 .section10 .promo-card .price-section .price-tag .price-now {
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: #222;
-  line-height: 1;
+  letter-spacing: -1px;
+}
+@media (max-width: 480px) {
+  .section10 .promo-card .price-section .price-tag .price-now {
+    font-size: 1.6rem;
+  }
 }
 .section10 .promo-card .price-section .price-tag .price-was {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #999;
   text-decoration: line-through;
-  line-height: 1;
+  font-weight: 400;
+}
+@media (max-width: 480px) {
+  .section10 .promo-card .price-section .price-tag .price-was {
+    font-size: 0.85rem;
+  }
 }
 .section10 .promo-card .buy-now {
   background-color: #f1802a;
