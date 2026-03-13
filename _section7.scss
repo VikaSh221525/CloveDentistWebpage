@@ -155,6 +155,11 @@
     .tech-section {
         .tech-section__cards {
             gap: 1rem;
+            .tech-card{
+                .tech-card__accent{
+                    width: 30px;
+                }
+            }
         }
     }
 }
@@ -193,6 +198,7 @@
             min-width: 300px;
             max-width: none;
             aspect-ratio: 1 / 1.1;
+            
         }
     }
 }
