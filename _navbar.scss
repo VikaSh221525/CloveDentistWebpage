@@ -1,37 +1,80 @@
 .navbar {
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     background-color: #fff9f4;
     border-bottom: 1px solid orange;
+    z-index: 1000;
 
     .navcontainer {
+        max-width: 1300px;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
+        .navbar__logo {
+            img {
+                height: 50px;
+                width: auto;
+            }
+        }
+
         .navbar__actions {
             display: flex;
-            gap: 2rem;
+            align-items: center;
+            gap: 1.5rem;
 
             .btn--primary {
-                padding: 0.7rem 0.7rem;
-                background-color: orange;
-                border-color: orange;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.6rem 1.4rem;
+                background-color: #e8802a;
                 border-radius: 2rem;
-                font-size: 1rem;
+                border: 1px solid rgb(133, 88, 3);
+                font-size: 0.95rem;
                 color: white;
-                font-weight: 500;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #d4721f;
+                }
+
+                @media (max-width: 768px) {
+                    display: none; // Hide on mobile as requested
+                }
             }
 
             .btn--secondary {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
                 text-decoration: none;
-                border: 2px solid black;
+                border: 1.5px solid #222;
                 border-radius: 1.5rem;
-                padding: 0.6rem;
-                font-size: 1rem;
-                color: black;
-                font-weight: 500;
+                padding: 0.5rem 1rem;
+                font-size: 0.95rem;
+                color: #222;
+                font-weight: 600;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #222;
+                    color: #fff;
+                }
+
+                @media (max-width: 480px) {
+                    padding: 0.4rem 0.8rem;
+                    font-size: 0.85rem;
+                }
             }
         }
+    }
+
+    @media (max-width: 768px) {
+        padding: 0.8rem 1rem;
     }
 }
