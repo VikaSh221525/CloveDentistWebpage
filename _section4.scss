@@ -1,0 +1,168 @@
+// =============================
+// Section 4 - Why Choose Clove Dental
+// =============================
+.why-choose {
+    padding: 3rem 0 2.5rem;
+    background-color: #fff;
+
+    .why-choose__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .why-choose__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 0.5rem;
+    }
+
+    .why-choose__subtitle {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 2.5rem;
+        line-height: 1.5;
+    }
+
+    // Content - Accordion left, Image right
+    .why-choose__content {
+        display: flex;
+        gap: 2.5rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    // Accordion column
+    .why-choose__accordion {
+        flex: 1;
+    }
+
+    // Individual accordion item
+    .accordion-item {
+        border-bottom: 1px solid #ddd;
+
+        &:first-child {
+            border-top: 1px solid #ddd;
+        }
+
+        .accordion-item__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: #fdf6ef;
+            }
+        }
+
+        .accordion-item__title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #222;
+        }
+
+        .accordion-item__icon {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #e8802a;
+            transition: transform 0.3s;
+            line-height: 1;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        // Body - hidden by default
+        .accordion-item__body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 0.5rem;
+
+            ul {
+                list-style: disc;
+                padding-left: 1.2rem;
+                padding-bottom: 1rem;
+
+                li {
+                    font-size: 0.85rem;
+                    color: #555;
+                    line-height: 1.7;
+                }
+            }
+        }
+
+        // Active / open state
+        &.active {
+            .accordion-item__title {
+                font-weight: 700;
+            }
+
+            .accordion-item__icon {
+                color: #e8802a;
+            }
+
+            .accordion-item__body {
+                max-height: 300px;
+                padding: 0 0.5rem;
+            }
+        }
+    }
+
+    // Image column
+    .why-choose__image {
+        flex: 0 0 40%;
+        max-width: 40%;
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.4s ease;
+        }
+    }
+}
+
+// =============================
+// Section 4 - Responsive
+// =============================
+@media (max-width: 768px) {
+    .why-choose {
+        .why-choose__content {
+            flex-direction: column-reverse;
+            gap: 1.5rem;
+        }
+
+        .why-choose__image {
+            flex: none;
+            max-width: 100%;
+            margin: auto;
+
+            img {
+                max-height: 300px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .why-choose {
+        padding: 2rem 0;
+
+        .why-choose__title {
+            font-size: 1.3rem;
+        }
+
+        .accordion-item {
+            .accordion-item__title {
+                font-size: 0.88rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,206 @@
+// =============================
+// Section 6 - Book an Appointment
+// =============================
+.book-appointment {
+    padding: 2rem 0;
+    background-color: #fff9f4;
+    margin: 0 5rem;
+    border-radius: 12px;
+
+    .book-appointment__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .book-appointment__title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #222;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    // Form
+    .book-appointment__form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    // Fields row - Name, Phone, Captcha inline
+    .book-appointment__fields {
+        display: flex;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .book-input {
+        flex: 1;
+        padding: 0.7rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-family: inherit;
+        outline: none;
+        background-color: #fff;
+        transition: border-color 0.3s;
+
+        &:focus {
+            border-color: #e8802a;
+        }
+
+        &::placeholder {
+            color: #999;
+        }
+    }
+
+    // Captcha group - looks like a single input
+    .book-captcha {
+        display: flex;
+        align-items: stretch;
+        flex: 1;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #fff;
+        transition: border-color 0.3s;
+
+        &:focus-within {
+            border-color: #e8802a;
+        }
+
+        .book-input {
+            flex: 1;
+            border: none;
+            border-radius: 0;
+
+            &:focus {
+                border-color: transparent;
+            }
+        }
+
+        .book-captcha__code {
+            background-color: #462512;
+            color: #fff;
+            padding: 0.7rem 1.2rem;
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 60px;
+            user-select: none;
+            letter-spacing: 1px;
+        }
+    }
+
+    // Actions row - Terms + Button
+    .book-appointment__actions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .book-appointment__terms {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.4rem;
+        font-size: 0.78rem;
+        color: #555;
+        line-height: 1.4;
+
+        .book-terms-checkbox {
+            margin-top: 2px;
+            accent-color: #e8802a;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        a {
+            color: #222;
+            text-decoration: underline;
+
+            &:hover {
+                color: #e8802a;
+            }
+        }
+    }
+
+    .book-appointment__btn {
+        padding: 0.8rem 2.5rem;
+        background-color: #e8802a;
+        color: #fff;
+        border: none;
+        border-radius: 24px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        font-family: inherit;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #d4721f;
+        }
+    }
+}
+
+// =============================
+// Section 6 - Responsive
+// =============================
+@media (max-width: 768px) {
+    .book-appointment {
+        margin: 0 1rem; // Reduce margin for mobile
+        padding: 2rem 0;
+
+        .book-appointment__container {
+            padding: 0 1rem;
+        }
+
+        .book-appointment__title {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .book-appointment__fields {
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .book-appointment__actions {
+            flex-direction: column;
+            align-items: center; // Center on mobile
+            gap: 1.2rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .book-appointment__terms {
+            justify-content: flex-start;
+            text-align: left;
+            width: 100%;
+        }
+
+        .book-appointment__btn {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .book-appointment {
+        margin: 0 1rem;
+
+        .book-appointment__title {
+            font-size: 1rem;
+        }
+    }
+}

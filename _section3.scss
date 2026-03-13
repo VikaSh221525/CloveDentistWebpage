@@ -1,0 +1,132 @@
+// =============================
+// Section 3 - Real Smiles, Real Transformations
+// =============================
+.transformations {
+    padding: 3rem 0 2.5rem;
+    background-color: #fff;
+
+    .transformations__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .transformations__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 0.5rem;
+        font-style: italic;
+    }
+
+    .transformations__subtitle {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 2.5rem;
+        line-height: 1.5;
+    }
+
+    // Grid - 4 cards in a row
+    .transformations__grid {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    // Individual card
+    .transform-card {
+        flex: 1;
+        max-width: 280px;
+
+        .transform-card__image {
+            overflow: hidden;
+            border-radius: 8px;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                object-fit: cover;
+                transition: transform 0.3s;
+            }
+
+            &:hover img {
+                transform: scale(1.03);
+            }
+        }
+
+        .transform-card__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.7rem 0.2rem 0;
+
+            .transform-card__name {
+                font-size: 0.9rem;
+                font-weight: 600;
+                color: #222;
+            }
+
+            .transform-card__city {
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: #e8802a;
+            }
+        }
+    }
+}
+
+// =============================
+// Section 3 - Responsive
+// =============================
+@media (max-width: 992px) {
+    .transformations {
+        overflow: hidden;
+
+        .transformations__container {
+            padding: 0;
+        }
+
+        .transformations__title, .transformations__subtitle {
+            padding: 0 2rem;
+        }
+
+        .transformations__grid {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 2rem 1.5rem;
+            justify-content: flex-start;
+            cursor: grab;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .transform-card {
+            flex: 0 0 240px;
+            min-width: 240px;
+            max-width: none;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .transformations {
+        padding: 2.5rem 0;
+
+        .transformations__title {
+            font-size: 1.3rem;
+        }
+
+        .transform-card {
+            flex: 0 0 220px;
+            min-width: 0;
+        }
+    }
+}

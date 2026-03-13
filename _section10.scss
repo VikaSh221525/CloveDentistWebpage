@@ -1,0 +1,224 @@
+.section10 {
+    padding: 4rem 2rem;
+    background-color: #fff;
+
+    &__container {
+        max-width: 1500px;
+        margin: 0 auto;
+        display: flex;
+        gap: 2rem;
+        align-items: stretch;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    .guidance-card {
+        flex: 1;
+        background-color: #fff9f4;
+        padding: 1.5rem 2.5rem;
+        border-radius: 20px;
+        border: 1.5px solid #ffe8d6;
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        &__subtitle {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .form-input {
+                padding: 1rem 1.5rem;
+                border: 1px solid #ddd;
+                border-radius: 30px;
+                font-size: 1rem;
+                background-color: #fff;
+                outline: none;
+
+                &:focus {
+                    border-color: #e8802a;
+                }
+            }
+
+            .form-terms {
+                display: flex;
+                gap: 0.8rem;
+                align-items: flex-start;
+                font-size: 0.85rem;
+                color: #666;
+
+                input {
+                    margin-top: 3px;
+                    accent-color: #e8802a;
+                }
+
+                a {
+                    color: #333;
+                    text-decoration: underline;
+                }
+            }
+
+            .form-submit {
+                background-color: #f1802a;
+                color: #fff;
+                padding: 1rem;
+                border: none;
+                border-radius: 30px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.3s;
+
+                &:hover {
+                    background-color: #d66418;
+                }
+            }
+        }
+    }
+
+    .promo-card {
+        flex: 1.5;
+        background-color: #fff;
+        border-radius: 20px;
+        border: 1.5px solid #ffe8d6;
+        display: flex;
+        overflow: hidden;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
+
+        &__image {
+            flex: 2.2;
+            background-color: #fff2e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__info {
+            flex: 1;
+            padding: 1.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @media (max-width: 600px) {
+                flex: none;
+            }
+        }
+
+        &__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        &__list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+
+            li {
+                font-size: 0.95rem;
+                color: #555;
+                margin-bottom: 0.4rem;
+                position: relative;
+                padding-left: 1.5rem;
+
+                &::before {
+                    content: "•";
+                    color: #e8802a;
+                    font-weight: bold;
+                    position: absolute;
+                    left: 0;
+                    font-size: 1.2rem;
+                    line-height: 1;
+                }
+            }
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+
+            @media (max-width: 480px) {
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+            }
+        }
+
+        .price-section {
+            .special-offer {
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: #f1802a;
+                display: block;
+                margin-bottom: 0.2rem;
+            }
+
+            .price-tag {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .price-now {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: #222;
+                    line-height: 1;
+                }
+
+                .price-was {
+                    font-size: 1rem;
+                    color: #999;
+                    text-decoration: line-through;
+                    line-height: 1;
+                }
+            }
+        }
+
+        .buy-now {
+            background-color: #f1802a;
+            color: #fff;
+            padding: 0.6rem 1.8rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background-color: #d66418;
+            }
+        }
+    }
+}

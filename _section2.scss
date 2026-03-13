@@ -1,0 +1,222 @@
+// =============================
+// Section 2 - Types of Root Canal Treatments
+// =============================
+.rct-types {
+    padding: 3rem 0 2.5rem;
+    background-color: #fff;
+
+    .rct-types__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+    }
+
+    .rct-types__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 0.6rem;
+    }
+
+    .rct-types__subtitle {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 2.5rem;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
+    }
+
+    // Cards grid
+    .rct-types__cards {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    // Individual card
+    .rct-card {
+        display: flex;
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        flex: 1;
+        max-width: 550px;
+        text-align: left;
+        border: 1.5px solid #e8802a;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        transition: box-shadow 0.3s;
+
+        &:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        // Card image
+        .rct-card__image {
+            flex: 0 0 50%;
+            max-width: 50%;
+            overflow: hidden;
+            background-color: #faeadb;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+        // Card info
+        .rct-card__info {
+            flex: 1;
+            padding: 1.5rem 1.5rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rct-card__name {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 0.3rem;
+        }
+
+        .rct-card__desc {
+            font-size: 0.82rem;
+            color: #666;
+            margin-bottom: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .rct-card__types-heading {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 0.4rem;
+        }
+
+        .rct-card__list {
+            list-style: disc;
+            padding-left: 1.2rem;
+            margin-bottom: 1rem;
+
+            li {
+                font-size: 0.82rem;
+                color: #444;
+                line-height: 1.6;
+            }
+        }
+
+        .rct-card__price-label {
+            font-size: 0.8rem;
+            color: #e8802a;
+            font-weight: 600;
+            font-style: italic;
+            margin-bottom: 0.1rem;
+        }
+
+        .rct-card__price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 0.8rem;
+        }
+
+        .rct-card__cta {
+            display: inline-block;
+            padding: 0.5rem 1.3rem;
+            background-color: #e8802a;
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            align-self: flex-start;
+
+            &:hover {
+                background-color: #d4721f;
+            }
+        }
+    }
+}
+
+// =============================
+// Section 2 - Responsive
+// =============================
+@media (max-width: 992px) {
+    .rct-types {
+        .rct-types__cards {
+            gap: 1.5rem;
+        }
+
+        .rct-card {
+            .rct-card__info {
+                padding: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .rct-types {
+        padding: 2.5rem 0;
+        overflow: hidden;
+
+        .rct-types__container {
+            padding: 0; // Remove container side padding for slider
+        }
+
+        .rct-types__title, .rct-types__subtitle {
+            padding: 0 2rem; // Keep text padded
+        }
+
+        .rct-types__cards {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 2rem 1.5rem;
+            justify-content: flex-start;
+            cursor: grab;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .rct-card {
+            flex: 0 0 280px;
+            min-width: 280px;
+            max-width: none;
+            flex-direction: column;
+
+            .rct-card__image {
+                flex: none;
+                max-width: 100%;
+                height: 180px;
+            }
+
+            .rct-card__info {
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .rct-types {
+        .rct-types__title {
+            font-size: 1.3rem;
+        }
+        
+        .rct-card {
+            flex: 0 0 260px;
+            min-width: 260px;
+        }
+    }
+}
